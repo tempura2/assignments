@@ -1,0 +1,965 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    font-weight: 400;
+    width: 100%;
+    height : 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)), url(pictures/background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left:8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar1, .navbar2, .navbar3 {
+    width: 100%;
+    position:fixed;
+    top:0;
+    right: 30px;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    box-shadow: 2 2px 10px rgba(0, 0, 0, 0.265);
+    padding: 10px 0;
+}
+
+.aboutnav ul li,
+.foodnav ul li,
+.actnav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav {
+    flex:1;
+    text-align: right;
+
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 18px;
+}
+
+.foodnav ul li a {
+    text-decoration: none;
+    color: #fffffd;
+    font-size: 18px;
+}
+
+.foodnav ul :hover {
+    color:rgb(3, 163, 227)
+}
+
+nav ul :hover {
+    color: rgb(9, 20, 33)
+}
+
+html{
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+    opacity:0;
+}
+
+.row {
+    display:flex;
+    height: 90%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1{
+    color: rgb(172, 172, 182);
+    font-size:70px;
+}
+
+.button {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    width: 150px;
+    font-size:14px;
+    padding: 16px;
+    margin-top: 650px;
+    margin-left: -100px;
+    border-radius: 20px;
+    outline: none;
+    cursor:pointer;
+}
+
+.indexbutton, .culturebutton {
+    background-color: #3a86b2;
+    border: 2px;
+    color:white;
+    transition: transform 0.3s ease;
+}
+
+.indexbutton:hover, .culturebutton:hover {
+    background-color: #0e122e;
+}
+
+#gotoabout {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.page-transition.active {
+    display: block;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.card {
+    width: 220px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 1px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 5px 10px;
+    background-position: center;
+    background-size: cover;
+    color: #030b37;
+    transition: transform 0.5s; 
+    font-weight: 400;
+}
+
+.card1 {
+    background-image: url(/pictures/food.jpg);
+}
+
+.card2 {
+    background-image: url(/pictures/culture.jpg);
+}
+
+.card3 {
+    background-image: url(/pictures/activities.jpg);
+}
+
+.card4 {
+    background-image: url(/pictures/attraction.jpg);
+}
+
+.card:hover {
+    transform: translate(-10px);
+}
+
+.about {
+    width: 100%;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.aboutpage {
+    background-image: url(/pictures/culconbackground.jpg);
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+   
+}
+
+#culture {
+    background-image:url(/pictures/culturebackground.jpg) ;
+    background-size: cover;
+}
+
+.culture-intro h1{
+    font-size: 120px;
+}
+
+#culture-page {
+   background-color: #0a0e1f;
+}
+
+section {
+    margin-top: 60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
+}
+
+.about-box {
+    background-color: rgba(230, 209, 209, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 35px;
+    height: 90vh;
+    width: 95%;
+}
+
+.about-content h1 {
+    margin-left: 100px;
+    font-size: 60px;
+    color:rgb(94, 143, 192);
+}
+
+.about-content p {
+    display: grid;
+    grid-template-columns:4fr 5fr;
+    color: rgb(6, 30, 43);
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.about-population h2 {
+    margin-right: 200px;
+    float:right;
+    margin-top: -275px;
+    font-size: 60px;
+    color: white;
+}
+
+.about-population p{
+    margin-left: 700px;
+    float:right;
+    margin-top: -170px;
+    color: rgb(0, 14, 34);
+    font-size: 20px;
+    grid-template-columns: 4fr 5fr;
+}
+
+.about-img {
+    float: left;
+    width: 30%;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 1.5rem;
+}
+
+.about-img1 {
+    float:right;
+    width: 30%;
+    margin-right: 50px;
+    margin-top: 5px;
+    border-radius: 1.5rem;
+}
+
+.about-img2 {
+    float: right;
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    border-radius: 1.5rem;
+}
+
+.personalityimg, .musicimg, .literatureimg  {
+    height: 650px;
+    width: 420px;
+}
+
+.culture-page {
+    background-color: #010d34;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.culturecard {
+    float:left;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: relative;
+}
+
+.peopleimg, .personalityimg , .musicimg, .literatureimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.culturecontent {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4757;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.culturecard:hover .culturecontent{
+    right: 0;
+}
+
+.culturecontent h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 20%;
+}
+
+.culturecontent p {
+    margin-top: 20px;
+    font-size: 16px;
+    margin: 40p 0;
+    font-weight:400;
+
+}
+
+.foodheader h1 {
+
+    margin-top: 60px;
+    text-align: center;
+    color: rgb(44, 115, 151);
+}
+
+.foodheader p{
+    text-align: center;
+    font-size: 25px;
+    color:rgb(255, 255, 255)
+}
+
+.foodpage {
+   background-color: #010d192a;
+}
+
+.foodcontainer ,.foodcontainer1 {
+    display: grid;
+    place-items: center;
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    margin-inline: 1.5rem;
+    padding-block: 3rem;
+    float:left;
+    padding-right: 80px;
+}
+
+.foodcard , .foodcard1{
+    display: grid;
+    row-gap: 5rem;
+    overflow:hidden;
+}
+
+.fooddata h2, .fooddata1 h2  {
+    font-size:30px;
+    text-align: center;
+    font-weight: 300;
+    color:#000e28;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.fooddata , .fooddata1  {
+    text-align: center;
+}
+
+.foodarticle , .foodarticle1 {
+
+    position:relative;
+    overflow: hidden;
+    background-color: rgba(197, 203, 212, 0.356);
+    backdrop-filter: blur(10px);
+    place-items: center;
+    box-sizing: border-box;
+    height: 450px;
+    border-radius: 1rem;
+}
+
+.foodimg ,.foodimg1  {
+    margin-top: 20px;
+    width: 320px;
+    border-radius: 1rem;
+}
+
+.food_description, .food_description1 {
+    display: block;
+    font-size: 13.5px;
+    margin-bottom: .25rem;
+    font-weight: 200;
+    color:rgb(0, 99, 132)
+}
+
+.foodtitle , .foodtitle1 {
+    font-size: large;
+    font-weight: 500;
+    color:#0c243a;
+    margin-bottom: .75rem;
+}
+
+.foodbutton , .foodbutton1{
+    text-decoration:underline;
+    font-size: 20px;
+    font-weight: 500;
+    color:#f2f1ef;
+}
+
+.foodbutton:hover, .foodbutton1:hover{
+    color: rgb(3, 204, 244)
+}
+
+.funpage {
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)), url(pictures/activityback.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activityheader h1 {
+   text-align: center;
+   font-size: 50px;
+   margin-top: 2px;
+   color: #1299d2
+}
+
+.activity-list .activity-item {
+    list-style: none;
+}
+
+.activity-list {
+    display: flex;
+    margin-left: 20px;
+}
+
+.activity-list  .activity-item .activity-link {
+    height: 620px;
+    margin-top: 40px;
+    width: 400px;
+    display: block;
+    background: #213c63a9;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    transition: 0.2 ease;
+}
+
+.activity-list .activity-item .activity-link:hover {
+    border-color: #1b346a
+}
+
+.activity-list .activity-link .activity-image {
+    width: 100%;  
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.activity-list .activity-link .activity1 {
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #305b8b;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.activity-list .activity-link .activity-title {
+    font-size: 1.19rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.activity-list .activity-link .activity-button {
+    height: 35px;
+    width: 35px;
+    color: #092438;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #000204;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.activity-list .activity-link:hover .activity-button {
+    color: #fff;
+    background:#041c34e6;
+
+}
+
+.ext-link {
+    width : 160px;
+    font-size: 17px;
+    padding : 16px 0;
+    background: #075dae;
+    border: 0;
+    border-radius: 20px;
+    margin-top: -50px;
+    outline: none;
+    margin-left: 220px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.extbutton {
+    border: 1px;
+    color:rgb(244, 244, 244);
+}
+
+.extbutton:hover {
+    background-color: #3d85b1;
+}
+
+.button3 {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 880px;
+    margin-left: -150px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.tonextpgbutton {
+    background-color: #01021f;
+    border: 2px;
+    color:white;
+}
+
+.tonextpgbutton:hover {
+    background-color:  #3898ab;
+}
+
+.button4 {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 880px;
+    margin-left: -1220px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.topreviouspgbutton {
+    background-color:  #01021f;
+    border: 2px;
+    color:white;
+}
+
+.topreviouspgbutton:hover {
+    background-color: #3898ab;
+}
+
+.button5 {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    margin-left: 1050px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.tonextpgbutton1 {
+    background-color: #3a86b2;
+    border: 2px;
+    color:white;
+}
+
+.tonextpgbutton1:hover {
+    background-color: #0e122e;
+}
+
+.button6 {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    margin-left: -1200px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.topreviouspgbutton1 {
+    background-color: #3a86b2;
+    border: 2px;
+    color:white;
+}
+
+.topreviouspgbutton1:hover {
+    background-color: #0e122e;
+}
+
+.attract-heading h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 90px;
+}
+
+.attractpage {
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)), url(pictures/attbackground.jpeg);
+}
+
+.attract-box {
+    padding: 10px 10%;
+}
+
+.attract-card {
+    padding: 50px 0;
+}
+
+.attract-box {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.attbox {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+.attbox img{
+    width:100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlay {
+    height: 0;
+    width:100%;
+    background: linear-gradient(transparent #24241a);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 50%;
+    font-size: 30px;
+    color: white;
+}
+
+.overlay a {
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 60px;
+    text-align: center;
+    padding: 5px 15px
+}
+
+.attbox:hover img{
+    transform: scale(1.2);
+}
+
+.attbox:hover .overlay {
+    height: 100%;
+}
+
+.button7 {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 100px;
+    margin-left: 1050px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.tonextpgbutton2 {
+    background-color: #021927;
+    border: 2px;
+    color:white;
+}
+
+.tonextpgbutton2:hover {
+    background-color: #010d34;
+}
+
+.button8 {
+    width : 180px;
+    font-size: 14px;
+    padding : 16px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 100px;
+    margin-left: -1200px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.topreviouspgbutton2 {
+    background-color: #021927;
+    border: 2px;
+    color:white;
+}
+
+.topreviouspgbutton2:hover {
+    background-color: #010d34;
+}
+
+.contact .navplan i{ 
+    color: black;
+    min-width: 50px;
+    height: 50px;
+    background: #ffffff76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contact {
+    margin: 0;
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)), url(pictures/planbackground.jpg);
+    background-size: cover;
+}
+
+.contact .plancontent {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .plancontent h2 {
+    font-size: 80px;
+    font-weight: 800;
+    color: #fff
+}
+
+.contact .plancontent p {
+    font-weight: 600;
+    color: #fff
+}
+
+.plancontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  
+}
+
+.plancontainer .contactinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.plancontainer .contactinfo .planbox {
+    position:relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.plancontainer .contactinfo .planbox .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.plancontainer .contactinfo .planbox .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.plancontainer .contactinfo .planbox .text h3 {
+    font-weight: 800;
+    color:whitesmoke
+}
+
+.contactform {
+    width: 55%;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.contactform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid#333;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputbox span{
+    position: absolute;
+    left: 0; 
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: 0.5s;
+    color: #8b8383
+}
+
+.contactform .inputbox input:focus ~span,
+.contactform .inputbox input:valid ~span,
+.contactform .inputbox textarea:focus ~span{
+    color:#0a0e1f;
+    font-size: 14px;
+    transform: translateY(-20px);
+}
+
+.contactform .inputbox input[type="submit"] {
+    width: 100px;
+    background:rgb(9, 9, 31);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+}
