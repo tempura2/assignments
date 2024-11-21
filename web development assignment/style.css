@@ -729,7 +729,7 @@ section {
 .overlay {
     height: 0;
     width:100%;
-    background: linear-gradient(transparent #24241a);
+    background-color:#2a30020c;
     border-radius: 10px;
     position: absolute;
     left:0;
