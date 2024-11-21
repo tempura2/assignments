@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!--Link to access to icons/logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="contact">
+        <div class="navplan">
+         <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="plancontent">
+            <h2> Contact us </h2>
+            <p> Book your next trip to Finland </p>
+        </div>
+        <!--Contact us part on the left-->
+        <div class="plancontainer">
+            <div class="contactinfo">
+                <div class="planbox">
+                    <div class="icon"><i class="fa-solid fa-map-pin"></i>
+                    </div>
+                    <div class="text">
+                        <h3> Address </h3>
+                        <p> 190 Fairfield Lane <br>
+                            Norwalk<br> CT 06851</p>
+                    </div>
+                </div>
+                <div class="planbox">
+                    <div class="icon"><i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text">
+                        <h3> Phone </h3>
+                        <p> 123456789 </p>
+                       
+                    </div>
+                </div>
+                    <div class="planbox">
+                        <div class="icon"><i class="fa-regular fa-envelope"></i>
+                        </div>
+                            <div class="text">
+                                <h3> Email </h3>
+                                <p> hello@gmail.com </p>
+                         </div>
+                 </div>
+                </div>
+                <!--User's input on the right-->
+                        <div class="contactform">
+
+                            <form id="myForm" onsubmit="return validateForm()">
+                                <h2>Contact Us</h2>
+                                <div class="inputbox">
+                                    <input type="text" id="name" placeholder="Enter your Full Name">
+                                    <span>Enter your Full Name</span>
+                                </div>
+                    
+                                <div class="inputbox">
+                                    <input type="email" id="email" placeholder="Enter your Email">
+                                    <span>Enter your Email</span>
+                                </div>
+                    
+                                <div class="inputbox">
+                                    <input type="month" id="month">
+                                    <span>When are you planning to travel?</span>
+                                </div>
+                    
+                                <div class="inputbox">
+                                    <textarea id="message" placeholder="Leave a message"></textarea>
+                                    <span>Leave a message</span>
+                                </div>
+                    
+                                <div class="inputbox">
+                                    <input type="submit" value="Send">
+                                    <p id="errorMessage"></p>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        </div>
+                    
+    </section>
+    <!--JS link-->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<!--No bugs or errors-->
