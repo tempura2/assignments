@@ -706,6 +706,7 @@ section {
 
 /*Attraction page*/
 .attract-heading h2{
+    color: white;
     font-size: 40px;
     text-align: center;
     font-weight: 500;
@@ -800,14 +801,14 @@ section {
     border: 0;
     border-radius: 20px;
     outline: none;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 1050px;
     cursor: pointer;
     transition-duration: 0.4s;
 }
 
 .tonextpgbutton2 {
-    background-color: #021927;
+    background-color: #256892;
     border: 2px;
     color:white;
 }
@@ -826,14 +827,14 @@ section {
     border: 0;
     border-radius: 20px;
     outline: none;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: -1200px;
     cursor: pointer;
     transition-duration: 0.4s;
 }
 
 .topreviouspgbutton2 {
-    background-color: #021927;
+    background-color: #256892;
     border: 2px;
     color:white;
 }
