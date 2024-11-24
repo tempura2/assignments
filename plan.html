@@ -13,7 +13,7 @@
 <body>
     <section class="contact">
         <div class="navplan">
-         <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <a href="index.html" title="Go to Home page"><em class="fa-solid fa-house"></em></a>
         </div>
         <div class="plancontent">
             <h2> Contact us </h2>
@@ -23,7 +23,7 @@
         <div class="plancontainer">
             <div class="contactinfo">
                 <div class="planbox">
-                    <div class="icon"><i class="fa-solid fa-map-pin"></i>
+                    <div class="icon"><em class="fa-solid fa-map-pin"></em>
                     </div>
                     <div class="text">
                         <h3> Address </h3>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="planbox">
-                    <div class="icon"><i class="fa-solid fa-phone"></i>
+                    <div class="icon"><em class="fa-solid fa-phone"></em>
                     </div>
                     <div class="text">
                         <h3> Phone </h3>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                     <div class="planbox">
-                        <div class="icon"><i class="fa-regular fa-envelope"></i>
+                        <div class="icon"><em class="fa-regular fa-envelope"></em>
                         </div>
                             <div class="text">
                                 <h3> Email </h3>
@@ -55,23 +55,24 @@
                             <form id="myForm" onsubmit="return validateForm()">
                                 <h2>Contact Us</h2>
                                 <div class="inputbox">
+                                    <label for="name">Enter Your Name</label>
                                     <input type="text" id="name" placeholder="Enter your Full Name">
-                                    <span>Enter your Full Name</span>
                                 </div>
                     
                                 <div class="inputbox">
+                                    <label for="email">Enter Email Address:</label>
                                     <input type="email" id="email" placeholder="Enter your Email">
-                                    <span>Enter your Email</span>
                                 </div>
                     
                                 <div class="inputbox">
+                                    <label for="month">Travel Month</label>
                                     <input type="month" id="month">
-                                    <span>When are you planning to travel?</span>
+                                   
                                 </div>
                     
                                 <div class="inputbox">
+                                    <label for="message">Message:</label>
                                     <textarea id="message" placeholder="Leave a message"></textarea>
-                                    <span>Leave a message</span>
                                 </div>
                     
                                 <div class="inputbox">
@@ -92,3 +93,4 @@
 </html>
 
 <!--No bugs or errors-->
+       
