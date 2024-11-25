@@ -199,17 +199,17 @@ h1{
 }
 
 .card2 {
-    background-image: url(/pictures/culture.jpg);
+    background-image: url(../pictures/culture.jpg);
     /*Civilisable. *Traditional Clothing* [online image]. Available at https://civilisable.com/finnish-culture/*/
 }
 
 .card3 {
-    background-image: url(/pictures/activities.jpg);
+    background-image: url(../pictures/activities.jpg);
     /*Devi, P. (2017). *Charms of Saimaa: What to do on Finland's Largest Lake on Winter* [online image] Available at https://traveldiaryparnashree.com/2017/03/charms-of-saimaa-all-about-the-frozen-lake-and-winter-activities.html*/
 }
 
 .card4 {
-    background-image: url(/pictures/attraction.jpg);
+    background-image: url(../pictures/attraction.jpg);
     /*Walkhelsinki(2022). *Helksinki for Kids* [online image]. Available at https://walkhelsinki.fi/visit-helsinki-guided-tours/*/
 }
 
