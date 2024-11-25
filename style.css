@@ -240,7 +240,7 @@ html {
 
 /* about and culture page */
 .aboutpage {
-    background-image: url(/pictures/culconbackground.jpg);
+    background-image: url(pictures/culconbackground.jpg);
     background-size: cover;
     opacity: 1;
     transition: opacity 1s ease-in-out;
@@ -248,7 +248,7 @@ html {
 }
 
 #culture {
-    background-image:url(/pictures/culturebackground.jpg) ;
+    background-image:url(pictures/culturebackground.jpg) ;
     background-size: cover;
 }
 
